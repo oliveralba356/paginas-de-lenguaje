@@ -1,0 +1,285 @@
+/*Estilos para toda la pagina y fondo*/
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background:url(../img/fondo.jpg)  ;
+}
+
+/*Estilos para el menu*/
+header
+{
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;padding: 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+nav
+{
+    float: right;
+}
+.clearflix
+{
+    clear: both;
+}
+nav ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li
+{
+    list-style: none;
+
+}
+nav ul li a
+{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+}
+/*Efectos hover*/
+
+nav ul li a.actividad,
+nav ul li a:hover
+{
+    background: #119;
+    color: #fff;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+}
+/*Hcaiendo un menu responsive*/
+@media (max-width:1200px)
+{
+    header
+    {
+        margin: 20px;
+    }
+}
+header h2
+{
+    position: relative;
+    left: 50%;
+    font-size: 60px;
+    font-weight: 300;
+    color: orange;
+
+}
+
+/*Estilos para el buscador*/
+.searchBox{
+    margin: 10px;
+    position: absolute;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.searchBox input
+{ 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    color: #555;
+    background: linear-gradient(#dbdae1, #a3aaba);
+    box-shadow: 5px 5px 5px rgba(0,0,0,011),
+                15px 15px 15px rgba(0,0,0,0.1),
+                20px 20px 20px rgba(0,0,0,0.1),
+                30px 30px 30px rgba(0,0,0,0.1),
+                inset 1px 1px 2px #fff;
+
+}
+/*estilo al footer*/
+footer
+{
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+/*estilos a los iconos de las redes sociales(footer)*/
+.redes ol li
+{
+    padding: 4px;
+    list-style: none;
+
+}
+
+.redes 
+{
+    color: #2c3e50;
+    transition: 0.6s;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #ffffff
+    0 0  10px #ffffff
+    0 0  20px #ffffff
+    0 0  35px #ffffff
+    unset #fff;
+    
+    
+}
+.redes a
+{
+    
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+    border-radius: 25%;
+    transition: 0.4s;
+}
+/*Estilos Hover a redes*/
+.redes a:hover
+{
+    background: #114;
+    color: white;
+    border-radius: 25px;
+}
+
+.container-footer p
+{
+    position: absolute;
+    left: 50%;
+    color: white;
+}
+.container-footer h2
+{
+    position: absolute;
+    left: 50%;
+    color: white;
+}
+
+
+.midle , .sm a i .fam{
+    position: relative;
+    top: 0%;
+    bottom: 30%;
+    left: 1%;
+    transform: translate(0%, 15%);
+
+
+}
+/*Estilos a la lista de juegos*/
+.card{
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+.front, .back{
+    width: 340px;
+    height: 480px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all 0.75s;
+}
+.front img{
+    height: 350px;
+    height: 350px;
+    position: absolute;
+    top: center;
+}
+/*rotacion de el juego*/
+.front{
+    transform: perspective(600px) rotateY(0deg);
+}
+.back{
+    border-radius: 10px;
+    height: 350px;
+    height: 350px;
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(560deg);
+
+
+}
+.back-content{
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+}
+/*Estilos dentro de las redes sociales dentro de la lista de juegos*/
+.sm{
+    margin: 20px;
+    
+}
+
+.sm a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #2c3e50;
+    font-size: 18px;
+    transition: 0.6s;
+    border-radius: 50%;
+    
+}
+/*Efecto hover a las redes sociales */
+.sm a:hover{
+    background: #2c3e50;
+    color: white;
+    border-radius: 25px;
+
+}
+/*Rotacion de las imagenes */
+.midle:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+
+}
+.midle:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+
+}
+/*colocar un tamaño y posicion a la lista de juegos*/
+.juego2{
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    top: 29%;
+    left: 30%;
+
+}
+.juego3{
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    top: 29%;
+    left: 60%;
+}
+.juego4{
+    width: 300px;
+    height: 350px;
+    position: relative;
+    top: 0%;
+    bottom: 120px;
+}
+.juego5{
+    width: 300px;
+    height: 350px;
+    position: relative;
+    left: 30%;
+    bottom: 465px;
+}
+.juego6{
+    width: 300px;
+    height: 350px;
+    position: relative;
+    left: 60%;
+    bottom: 815px;
+}
